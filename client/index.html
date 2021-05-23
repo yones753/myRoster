@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <div class="input-group m-4 mr-5">
+    <input id='nameRoster' type="text" class="form-control" placeholder="Select Roster..."
+      aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button id="getRoster" class="btn btn-outline-secondary" type="button">Get Roster</button>
+    </div>
+  </div>
+
+
+
+  <div id="teamContainer"></div>
+
+  <script id="team-template" type="text/x-handlebars-template">
+   <div class="row">
+     {{#each list}}
+     {{#if isActive}}
+  <div class="col-lg-3 col-sm-1 col-md-2">
+    <div class="card">
+      <img id="imgg" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}"  class="card-img-top"  alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{firstName}} --- {{lastName}}</h5>
+      </div>
+    </div>
+  </div>
+       {{/if}}
+   {{/each}}
+  </div>
+  </script>
+
+
+  <script src="./jquery/dist/jquery.js"></script>
+  <script src="./handlebars/dist/handlebars.js"></script>
+  <script src="api.js"></script>
+  <script src="render.js"></script>
+  <script src="controller.js"></script>
+</body>
+
+</html>

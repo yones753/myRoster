@@ -1,0 +1,8 @@
+  <!-- <button id="loadData">get all</button> -->
+  {{!-- <p>Team:</p>
+  {{#each list}}
+  {{#if isActive}}
+  <div>{{firstName}} - {{lastName}}</div>
+  <img class="imgg" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}">
+  {{/if}}
+  {{/each}} --}}
